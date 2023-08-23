@@ -1,47 +1,56 @@
-Term Project - Image Processing with Machine Learning (DA 526)
+Project Title: Distracted Driver Detection using Various Deep Learning Models
 
-## Distracted-Driver-Detection
+Aim: To detect unsafe driving behaviors and potential distractions, ensuring road safety by preventing accidents and harm to others.
 
-A collection of models for distracted driver detection using PCA + KNN, Autoencoder + KNN, Custom CNNs, VGG16, RESNET, and MobileNET.
+Dataset: State Farm Distracted Driver Detection Dataset from Kaggle
 
-Aim : To detect if the car driver is driving safely or performing any activity that might result in an accident or any harm to others.
-
-Dataset:
-Dataset from Kaggle (State Farm Distracted Driver Detection).
-Key Features of the State Farm Distracted Driver Detection Dataset are:
-Number of images (Training set): 22,424.
-Number of images (Testing set): 79,726.
-Number of classes: 10
+Training set: 22,424 images
+Testing set: 79,726 images
+Classes: 10
 Image size: 640x480 pixels
 Image format: JPG
-Class distribution: uneven, ranging from 2,000 to 2,800 images per class
-Data source and collection method: dashcams in actual vehicles driven by State Farm customers.
-
-
+Class distribution: Uneven, 2,000 to 2,800 images per class
+Data source: Dashcams in vehicles driven by State Farm customers
 Methods:
-With the understanding of the problem statement and several brainstorming sessions we moved on to creating models for our dataset. The basic idea was to construct the following:
-1. PCA and Autoencoder with KNN classifier
-2. Custom CNN 01
-3. Custom CNN 02
-4. VGG16
-5. RESNET
-6. MobileNET
 
-Above models are initially trained over normal data splitting but, after encountered the issue of data leaking. So, data is splitted over driver IDs to avoid appearance of the same same driver in two or more splits. Afterwards trained above models again to encounter the data leaking issue.
+Data Preprocessing:
+Data split based on driver IDs to prevent data leakage.
+Image preprocessing using OpenCV.
+Models:
+PCA and Autoencoder with K-Nearest Neighbors (KNN) classifier.
+Custom Convolutional Neural Network (CNN) 01.
+Custom Convolutional Neural Network (CNN) 02.
+VGG16 pre-trained model.
+ResNet pre-trained model.
+MobileNet pre-trained model.
+Libraries and Frameworks Used:
+Python: Programming language.
+PyTorch and TensorFlow: Deep learning frameworks for model development.
+Keras: High-level neural networks API (built on TensorFlow).
+NumPy: Numerical computations and array operations.
+Pandas: Data manipulation and analysis.
+Scikit-learn: Machine learning algorithms and evaluation metrics.
+OpenCV: Computer vision tasks, image preprocessing, and manipulation.
+Matplotlib: Data visualization and plotting.
+Jupyter Notebook: Interactive code development and experimentation.
+Kaggle Notebook: Cloud-based environment for code execution and dataset exploration.
+Workflow:
 
-Tools and Libraries Used:
-1. Python: Programming language used for implementing the code.
-2. PyTorch: Deep learning framework for building and training neural networks.  
-3. TensorFlow: Deep learning framework for building and training neural networks. 
-4. Keras: High-level neural networks API running on top of TensorFlow. 
-5. NumPy: Library for numerical computations and array operations. 
-6. Pandas: Library for data manipulation and analysis. 
-7. Scikit-learn: Library for machine learning algorithms and evaluation metrics. 
-8. OpenCV: Library for computer vision tasks, such as image preprocessing and manipulation. 
-9. Matplotlib: Library for data visualization and plotting. 
-10. Jupyter Notebook: Interactive environment used for code development and experimentation. 
-11. Kaggle Notebook: Cloud-based notebook environment provided by Kaggle for running code and exploring datasets, etc. 
-
-
-
-
+Data Splitting: Split data by driver IDs to prevent data leakage and ensure generalization.
+Data Preprocessing: Apply image preprocessing techniques using OpenCV.
+Model Development:
+Implement PCA and Autoencoder for dimensionality reduction and feature extraction.
+Design and train custom CNN models tailored to the problem.
+Utilize pre-trained VGG16, ResNet, and MobileNet models for transfer learning.
+Model Training:
+Train all models on the training data while ensuring no data leakage.
+Model Evaluation:
+Evaluate models using appropriate metrics such as accuracy, precision, recall, etc.
+Fine-Tuning and Optimization:
+Perform hyperparameter tuning and optimize models for better performance.
+Ensemble (Optional):
+Combine the predictions from multiple models for improved results.
+Testing:
+Test the final models on the testing dataset to assess real-world performance.
+Conclusion:
+By implementing a variety of deep learning models and leveraging techniques like PCA, Autoencoder, and transfer learning from pre-trained models, the project aims to accurately detect unsafe driving behaviors and distractions. The careful data preprocessing, model selection, and training on driver-based splits mitigate data leakage issues, ensuring robust and reliable model performance. This project contributes to enhancing road safety by identifying potential accident-causing actions and enabling timely interventions.
